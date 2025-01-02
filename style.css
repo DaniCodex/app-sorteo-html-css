@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+/*INTERFAZ PRINCIPAL*/
+
+main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ebebeb;
+}
+
+.container-app-sorteo {
+    width: 450px;
+    max-width: 450px;
+    margin: 0 20px;
+    padding: 20px;
+    border: 2px solid rgb(0 0 0 / 5%);
+    box-shadow: 2px 2px 1px rgb(0 0 0 / 5%);
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.participantes-label {
+    font-weight: 500;
+}
+
+.participantes {
+    width: 100%;
+    height: 200px;
+    resize: none;
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid thin #d2d6dc;
+    color: #495057;
+    font-weight: 500;
+}
+
+.participantes:focus {
+    border-color: #007bff;
+    outline: none;
+    border-width: 2px;
+}
+
+.container-app-sorteo .opciones {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.container-app-sorteo .opciones p {
+    margin: 10px 15px;
+    color: #007bff;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.container-app-sorteo .opciones p:hover {
+    color: #9b2963;
+}
+
+.container-app-sorteo .empezar {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #007bff;
+    margin: 30px auto;
+    padding: 10px 30px;
+    border: 0;
+    border-radius: 10px;
+    color: #Fff;
+    cursor: pointer;
+}
+
+.container-app-sorteo .empezar:hover {
+    background-color: "#2786ec";
+}
+
+/*CHOCOLATEAR PARTICIPANTES*/
+
+.participantes-container {
+    margin: 10px;
+    width: 400px;
+    border-radius: 8px;
+    background: #00B4DB;
+    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.08);
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);
+}
+
+.participantes-container .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 10px 0 ;
+    border-bottom: 1px solid rgba(255, 255, 255, .4);
+    color: #fff;
+}
+
+.participantes-container .header i {
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.participantes-container .total {
+    margin: 10px;
+    color: #e2e2df;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.participantes-container .total span {
+    color: #fff;
+}
+
+.participantes-container .lista-participantes li {
+    list-style: none;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: none;
+}
+
+.participantes-container .lista-participantes li:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.participantes-container button,
+.ganadores-container a {
+    position: absolute;
+    padding: 15px 24px;
+    display: block;
+    left: 50%;
+    margin-top: 30px;
+    transform: translateX(-50%);
+    width: 250px;
+    background-color: #85bf31;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.participantes-container button:hover {
+    background-color: #91d237;
+}
+
+/*Estilos para el contador*/
+
+.container-bg {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    border: solid 10px #f2f6fa;
+}
+
+.container-bg .borde-interno {
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    border: solid 3px #f2f6fa;
+    border-left-color: #007bff;
+    border-right-color: #007bff;
+    border-bottom-color: #007bff;
+    margin: auto;
+    animation: rotation 1s linear infinite;
+}
+
+.container-bg p {
+    position: absolute;
+    left: 50%;
+    font-size: 6rem;
+    transform: translateX(-50%);
+    font-weight: 600;
+    color: #007bff;
+    user-select: none;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container-contador svg {
+    animation: rotar 15s linear infinite;
+}
+
+@keyframes rotar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+/*Mostrar Ganadores*/
+
+.ganadores-container {
+    margin: 10px;
+    width: 400px;
+}
+
+.ganadores-container h3 {
+    text-align: center;
+    padding: 15px;
+    color: #b4b8c5;
+    font-size: 1.8rem;
+}
+
+.ganadores {
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    box-shadow: 2px 2px 1px rgb(0 0 0 / 5%);
+    border: 2px solid rgb(0 0 0 / 5%);
+}
+
+.ganadores .ganadores-li {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.ganadores-li li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid thin #d2d6dc;
+    padding: 10px;
+}
+
+.ganadores-li li:last-child {
+    border: none;
+}
+
+.ganadores-li p {
+    display: flex;
+    align-items: center;
+}
+
+.ganadores-li li:first-child,
+.ganadores-li li:nth-child(2),
+.ganadores-li li:nth-child(3) {
+    font-weight: 500;
+}
+
+.ganadores-li span {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: #007bff;
+    display: block;
+    margin-right: 10px;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+.ganadores-li li:first-child span {
+    background-color: #ffd700;
+    color: #fff;
+    font-weight: 600;
+}
+
+.ganadores-li li:nth-child(2) span {
+    background-color: #cd7f32;
+    color: #fff;
+    font-weight: 600;
+}
+
+.ganadores-li li:nth-child(3) span {
+    background-color: #c0c0c0;
+    color: #fff;
+    font-weight: 600;
+}
+
+.ganadores-container a {
+    width: 300px;
+    padding: 15px 10px;
+    margin-top: 50px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/*Estilos alertas*/
+.alerta {
+    position: fixed;
+    background: #fbd0da;
+    padding: 15px;
+    border-radius: 50px;
+    font-weight: 500;
+    bottom: -10%;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    color: #9b2963;
+}
+
+.alerta.active {
+    transition: all .5s ease-in-out;
+    opacity: 1;
+    bottom: 50px;
+}
